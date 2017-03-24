@@ -227,7 +227,7 @@ p.day {
 .time-block {
     background-color: #85D961;
     padding: 5px;
-    margin-right: 10px;
+    margin-right: 15px;
     color: black;
 }
 
@@ -239,3 +239,86 @@ p.day {
     text-decoration: none;
     color: black;
 }
+
+div#announcements {
+    overflow: -moz-scrollbars-vertical; 
+    overflow-y: scroll;
+    height: 85%;
+    width: 99%;
+}
+
+.countdown {
+	position: absolute;
+	bottom: 2%;
+	left: 1%;
+	width: 19.5%;
+	background: #4C4C4C;
+	padding: 1px 13px 5px 13px;
+}
+
+.time-count p {
+    display: inline;
+}
+
+.time-count, .time-count p {
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.countdown p {
+    margin-bottom: 0;
+}
+
+@media (max-width: 1090px) and (min-width: 825px) {
+	.column-right {
+	    width: calc(32% - 2px);
+	}
+
+	.column-center {
+	    width: 44%;
+	}
+}
+
+@media (max-width: 824px) {
+	.column-center, .column-left, .column-right {
+	    float: none;
+	    width: 100%;
+	}
+
+	.container {
+	    height: auto;
+	}
+
+	div#announcements {
+	    height: 480px;
+	}
+
+	.column-left {
+	    padding-top: 10px;
+	    padding-bottom: 40px;
+	}
+
+	iframe#rufous-sandbox {}
+
+	iframe#twitter-widget-0 {
+	    height: 380px !important;
+	    width: 81% !important;
+	    margin: 80px auto;
+	    display: block !important;
+	}
+	.modal-content {
+	    width: 100%;
+	    height: 100%;
+        overflow-y: scroll;
+	}
+	.modal {
+	    padding-top: 0;
+	}
+	.countdown {
+	    position: relative;
+	    margin: 40px auto 0px auto;
+	    width: 50%;
+	}
+}
+
