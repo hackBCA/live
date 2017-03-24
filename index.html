@@ -44,7 +44,17 @@
 
    	</div>
    
-   <div class="column-left"><p>SCHEDULE</p></div>
+   <div class="column-left">
+   		<p>SCHEDULE</p>
+   		<p class = "day">Saturday</p>
+   		<ul>
+   			<li><span class = "time-block">12:00 PM</span>Ice Cream</li>
+   		</ul>
+   		<p class = "day">Sunday</p>
+   		<ul>
+   			<li><span class = "time-block">1:00 AM</span>Pizza</li>
+   		</ul>
+   	</div>
    
    <div class="column-right">
   		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hackBCA" data-widget-id="581445652657369088"></a>
@@ -52,16 +62,17 @@
   		<div class = "links">
   			<div class="links-col1">
 	  			<ul>
-	  				<li>Workshops</li>
-	  				<li>APIs</li>
-	  				<li>Prizes</li>
-	  				<li>CTF</li>
+	  				<li><a id="wkshpsbtn" style = "cursor:pointer">Workshops</a></li>
+	  				<li><a id="APIBtn" style = "cursor:pointer">APIs</a></li>
+	  				<li><a id="prizesBtn" style = "cursor:pointer">Prizes</a></li>
+	  				<li><a target = "_blank" href = "http://104.236.206.233:8000/">CTF</a></li>
 	  			</ul>
   			</div>
    			<div class="links-col2">
 				<ul>
 	  				<li><a target = "_blank" href = "https://hackbca4.devpost.com"/>Devpost</a></li>
-	  				<li>Slack</li>
+	  				<li><a target = "_blank" href = "https://hackbca4.devpost.com"/>FB Group</a></li>
+	  				<li><a target = "_blank" href = "https://hackbca4.slack.com/shared_invite/MTYwMTExMDM2NzkxLTE0OTAzNzU1MTAtNTI4ODg4YmI4Mw"/>Mentor Slack</a></li>
 	  				<li><a target = "_blank" href = "https://www.facebook.com/BCAhackathon/"/>Facebook</a></li>
 	  			</ul>
    			</div>
@@ -70,7 +81,86 @@
    </div>
 </div>
 
+<div id = "modals">
+	<div id="APImodal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="closeAPI">&times;</span>
+	      <h2>APIs</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div id="prizesmodal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="closePrizes">&times;</span>
+	      <h2>Prizes</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div id="wkshpsmodal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="closewkshps">&times;</span>
+	      <h2>Workshops</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    </div>
+	  </div>
+	</div>
+</div>
+
 </body>
 
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<script>
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+var apimodal = document.getElementById('APImodal');
+var apibtn = document.getElementById("APIBtn");
+var span = document.getElementsByClassName("closeAPI")[0];
+apibtn.onclick = function() {
+    apimodal.style.display = "block";
+}
+span.onclick = function() {
+    apimodal.style.display = "none";
+}
+
+var prizesmodal = document.getElementById('prizesmodal');
+var prizesbtn = document.getElementById("prizesBtn");
+var span = document.getElementsByClassName("closePrizes")[0];
+prizesbtn.onclick = function() {
+    prizesmodal.style.display = "block";
+}
+span.onclick = function() {
+    prizesmodal.style.display = "none";
+}
+
+var wkshpsmodal = document.getElementById('wkshpsmodal');
+var wkshpsbtn = document.getElementById("wkshpsbtn");
+var span = document.getElementsByClassName("closewkshps")[0];
+wkshpsbtn.onclick = function() {
+    wkshpsmodal.style.display = "block";
+}
+span.onclick = function() {
+    wkshpsmodal.style.display = "none";
+}
+
+</script>
 </html>

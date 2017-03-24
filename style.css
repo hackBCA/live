@@ -149,3 +149,93 @@ iframe#twitter-widget-0 {
     font-size: 20px;
     margin-bottom: 9px;
 }
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.closeAPI, .closePrizes, .closewkshps {
+    color: white;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    transition: 0.3s fade;
+}
+
+.closeAPI:hover, .closePrizes:hover, .closewkshps:hover, .closeAPI:focus, .closePrizes:focus, .closewkshps:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+p.day {
+    font-weight: 100;
+    font-size: 21px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.column-left ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.time-block {
+    background-color: #85D961;
+    padding: 5px;
+    margin-right: 10px;
+    color: black;
+}
+
+.column-left li {
+    color: #c7c7c7;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
