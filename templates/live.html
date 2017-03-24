@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://use.typekit.net/cdh1lxe.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
+	<link rel="icon" href="https://s3.amazonaws.com/hackbcaiv/favicon.png">
+	<link rel="stylesheet" href="../live_static/css/style.css">
+	<script src = "https://platform.twitter.com/widgets.js"></script>
+	<title>hackBCA IV Live</title>
+</head>
+<body>
+
+<nav class = "header">
+	<ul>
+	  <li>
+	  	<a class = "homelink" href="http://hackbca.com/">
+			<img style="vertical-align:middle" src="../live_static/img/logo-new.png">
+	  		<span style="">hackBCA IV</span>
+  		</a>
+	  </li>
+
+	  <li class="right-link"><a target = "_blank" href="https://livestream.com/accounts/18225475/hackbca">Livestream</a></li>
+	</ul>
+</nav>
+
+<div class="container">
+   <div class="column-center">
+   		<p class = "announcements-head">ANNOUNCEMENTS</p>
+
+   		<div class = "highest announcement">
+   			<h3>{{ primary['title'] }}</h3>
+   			<p>{{ primary['content'] }}</p>
+   		</div>
+
+   		{% for a in announcements %}
+
+   		<div class = "announcement">
+   			<h4>{{ a['title'] }}</h4>
+   			<p>{{ a['content'] }}</p>
+   		</div>
+
+   		{% endfor %}
+   	</div>
+   
+   <div class="column-left">
+   		<p>SCHEDULE</p>
+
+   		<p class = "day">Saturday</p>
+   		{% for date in schedule[0] %}
+   			
+   		<ul>
+   			<li><span class = "time-block">{{ date['time'] }}</span>{{ date['title'] }}</li>
+   		</ul>
+   		{% endfor %}
+
+   		<p class = "day">Sunday</p>
+   		{% for date in schedule[1] %}
+   			
+   		<ul>
+   			<li><span class = "time-block">{{ date['time'] }}</span>{{ date['title'] }}</li>
+   		</ul>
+   		
+   		{% endfor %}
+   	</div>
+   
+   <div class="column-right">
+  		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hackBCA" data-widget-id="581445652657369088"></a>
+  		<p>LINKS</p>
+  		<div class = "links">
+  			<div class="links-col1">
+	  			<ul>
+	  				<li><a id="wkshpsbtn" style = "cursor:pointer">Workshops</a></li>
+	  				<li><a id="APIBtn" style = "cursor:pointer">APIs</a></li>
+	  				<li><a id="prizesBtn" style = "cursor:pointer">Prizes</a></li>
+	  				<li><a target = "_blank" href = "http://104.236.206.233:8000/">CTF</a></li>
+	  			</ul>
+  			</div>
+   			<div class="links-col2">
+				<ul>
+	  				<li><a target = "_blank" href = "https://hackbca4.devpost.com"/>Devpost</a></li>
+	  				<li><a target = "_blank" href = "https://hackbca4.devpost.com"/>FB Group</a></li>
+	  				<li><a target = "_blank" href = "https://hackbca4.slack.com/shared_invite/MTYwMTExMDM2NzkxLTE0OTAzNzU1MTAtNTI4ODg4YmI4Mw"/>Mentor Slack</a></li>
+	  				<li><a target = "_blank" href = "https://www.facebook.com/BCAhackathon/"/>Facebook</a></li>
+	  			</ul>
+   			</div>
+   			<div style="clear: both;"></div>
+  		</div>
+   </div>
+</div>
+
+<div id = "modals">
+	<div id="APImodal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="closeAPI">&times;</span>
+	      <h2>APIs</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div id="prizesmodal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="closePrizes">&times;</span>
+	      <h2>Prizes</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    </div>
+	  </div>
+	</div>
+
+	<div id="wkshpsmodal" class="modal">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <span class="closewkshps">&times;</span>
+	      <h2>Workshops</h2>
+	    </div>
+	    <div class="modal-body">
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	    </div>
+	  </div>
+	</div>
+</div>
+
+</body>
+
+<script>
+
+!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+
+
+var apimodal = document.getElementById('APImodal');
+var apibtn = document.getElementById("APIBtn");
+var span = document.getElementsByClassName("closeAPI")[0];
+apibtn.onclick = function() {
+    apimodal.style.display = "block";
+}
+span.onclick = function() {
+    apimodal.style.display = "none";
+}
+
+var prizesmodal = document.getElementById('prizesmodal');
+var prizesbtn = document.getElementById("prizesBtn");
+var span = document.getElementsByClassName("closePrizes")[0];
+prizesbtn.onclick = function() {
+    prizesmodal.style.display = "block";
+}
+span.onclick = function() {
+    prizesmodal.style.display = "none";
+}
+
+var wkshpsmodal = document.getElementById('wkshpsmodal');
+var wkshpsbtn = document.getElementById("wkshpsbtn");
+var span = document.getElementsByClassName("closewkshps")[0];
+wkshpsbtn.onclick = function() {
+    wkshpsmodal.style.display = "block";
+}
+span.onclick = function() {
+    wkshpsmodal.style.display = "none";
+}
+
+</script>
+</html>
