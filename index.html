@@ -5,6 +5,8 @@
 	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 	<link rel="icon" href="https://s3.amazonaws.com/hackbcaiv/favicon.png">
 	<link rel="stylesheet" href="style.css">
+	<script src = "https://platform.twitter.com/widgets.js"></script>
+	<title>hackBCA IV Live</title>
 </head>
 <body>
 
@@ -17,16 +19,58 @@
   		</a>
 	  </li>
 
-	  <li class="right-link"><a href="#about">Slack</a></li>
 	  <li class="right-link"><a href="#about">Livestream</a></li>
 	</ul>
 </nav>
 
 <div class="container">
-   <div class="column-center"><p>ANNOUNCEMENTS</p></div>
+   <div class="column-center">
+   		<p class = "announcements-head">ANNOUNCEMENTS</p>
+
+   		<div class = "highest announcement">
+   			<h3>This is the title of the main announcement.</h3>
+   			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   		</div>
+
+   		<div class = "announcement">
+   			<h4>This is the title of another announcement.</h3>
+   			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   		</div>
+
+   		<div class = "announcement">
+   			<h4>This is the title of another announcement.</h3>
+   			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+   		</div>
+
+   	</div>
+   
    <div class="column-left"><p>SCHEDULE</p></div>
-   <div class="column-right">Column right</div>
+   
+   <div class="column-right">
+  		<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hackBCA" data-widget-id="581445652657369088"></a>
+  		<p>LINKS</p>
+  		<div class = "links">
+  			<div class="links-col1">
+	  			<ul>
+	  				<li>Workshops</li>
+	  				<li>APIs</li>
+	  				<li>Prizes</li>
+	  				<li>CTF</li>
+	  			</ul>
+  			</div>
+   			<div class="links-col2">
+				<ul>
+	  				<li><a target = "_blank" href = "https://hackbca4.devpost.com"/>Devpost</a></li>
+	  				<li>Slack</li>
+	  				<li><a target = "_blank" href = "https://www.facebook.com/BCAhackathon/"/>Facebook</a></li>
+	  			</ul>
+   			</div>
+   			<div style="clear: both;"></div>
+  		</div>
+   </div>
 </div>
 
 </body>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 </html>

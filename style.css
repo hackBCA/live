@@ -12,17 +12,17 @@ body {
 .column-right{
 	background-color: white;
 	float: right;
-	width: calc(30% - 2px);
+	width: calc(24% - 2px);
 	border-left: 1px solid #909090;
 }
 
 .column-center{
 	background-color: white;
 	display: inline-block;
-	width: 46%;
+	width: 52%;
 }
 
-ul {
+nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -30,11 +30,11 @@ ul {
     background-color: #000;
 }
 
-li {
+nav li {
     float: left;
 }
 
-li a {
+nav li a {
     display: block;
     color: white;
     text-align: center;
@@ -79,9 +79,73 @@ li a {
     font-weight: 600;
 }
 
-.column-center p {
+.announcements-head {
     font-size: 19px;
     color: black;
     margin-left: 22px;
     font-weight: 600;
+}
+
+iframe#twitter-widget-0 {
+    height: 70% !important;
+}
+
+.links-col1 {
+    float: left;
+    width: 50%;
+}
+
+.links-col2 {
+    float: right;
+    width: 50%;
+}
+
+.links ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.links ul
+ li {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.links {
+    clear: none;
+    width: 85%;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+.column-right p {
+    font-size: 19px;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    margin: 7px;
+}
+
+.announcement {
+    width: 90%;
+    margin-left: 22px;
+}
+
+.announcement p {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.announcement h4 {
+    margin-bottom: 5px;
+}
+
+.highest.announcement p {
+    font-size: 17px;
+}
+
+.highest.announcement h3 {
+    font-size: 20px;
+    margin-bottom: 9px;
 }
