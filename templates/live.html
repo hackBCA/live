@@ -46,21 +46,21 @@
    		<p>SCHEDULE</p>
 
    		<p class = "day">Saturday</p>
+   		<ul>
    		{% for date in schedule[0] %}
    			
-   		<ul>
    			<li><span class = "time-block">{{ date['time'] }}</span>{{ date['title'] }}</li>
-   		</ul>
    		{% endfor %}
+   		</ul>
 
    		<p class = "day">Sunday</p>
+   		<ul>
    		{% for date in schedule[1] %}
    			
-   		<ul>
    			<li><span class = "time-block">{{ date['time'] }}</span>{{ date['title'] }}</li>
-   		</ul>
    		
    		{% endfor %}
+   		</ul>
    	</div>
    
    <div class="column-right">

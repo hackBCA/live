@@ -223,7 +223,7 @@ def schedule():
 
     events_unsorted = []
 
-    for i in range(121):
+    for i in range(121):					# Up to 120 scheduled events!
       curr_title_name = 'title' + str(i + 1)
       curr_day_name = 'day' + str(i + 1)
       curr_time_name = 'time' + str(i + 1)
@@ -239,7 +239,7 @@ def schedule():
 
     # SAVE THE EVENTS IN DB
     for e in events_unsorted:
-      if 'sat' in e[1].lower():
+      if 'sat' in e[1].lower():		# Reformat day
       	e[1] = 'Sat'
 
       elif 'sun' in e[1].lower():
@@ -255,7 +255,7 @@ def schedule():
     return redirect('/edit_schedule')
 
   events_unsorted = list(schedule_db.find())
-  events = sort(events_unsorted)
+  events = sort(events_unsorted)			# Load up schedule, Sort based on 'spot' parameter to put into calendar order
 
   titles = []
   days = []
@@ -268,7 +268,7 @@ def schedule():
   	times.append(e['time'])
   	spots.append(float(e['spot']))
 
-  print(titles)
+  #print(titles)
   
   return render_template('live.schedule.html', titles=titles, days=days, times=times, spots=spots)
 
@@ -289,7 +289,7 @@ def live():
   ann = []
 
   for a in announcements.find():
-    if a['primary'] == True:
+    if a['primary'] == True:		# Main announcement
       primary = a
     else:
       ann.append(a)
@@ -304,15 +304,15 @@ def get_schedule():
   temp_events = sort(events_unsorted)
   events = [[], []]
   for e in temp_events:
-    if len(e['title'].strip()) > 0: #Don't display empty schedule events on live site!
+    if len(e['title'].strip()) > 0: # Don't display empty schedule events on live site!
       if e['day'] == 'Sat':
-        events[0].append(e)
+        events[0].append(e)			# Saturday schedule
       else:
-        events[1].append(e)
+        events[1].append(e)			# Sunday schedule
 
   return events
 
-#takes in schedule object
+# Takes in schedule object and sorts into calendar order
 def sort(events):
   for j in range(len(events) - 1, 0, -1):
     for i in range(j):
