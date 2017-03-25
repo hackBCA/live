@@ -20,6 +20,7 @@ user_entry = db.user_entry
 staff = db.staff
 schedule_db = db.schedule
 announcements = db.live_announcements
+paths_db = db.paths
 
 #User Model
 class Admin(object):
@@ -91,20 +92,41 @@ def ios():
     return redirect('/admin')
 
   if request.method == 'POST':
-    phonenums = request.form['phonenums'] # string containing CSV of phonenums
-    names = request.form['names']
-    admin = staff.find_one({'username': username})
+    #phonenums = request.form['phonenums'] # string containing CSV of phonenums
 
-    for name in names:
-      staff.update_one({          # UPDATE array of hackers in this path
+    names = []
+    phone_nums = []
+
+    for i in range(100):
+      curr_name = 'name' + str(i + 1) # name1 -> name100 will be the names from request.form
+      curr_phone_num = 'phone' + str(i + 1)
+
+      name = request.form[curr_name]
+      digits = '0123456789'
+      phone_temp = request.form[curr_phone_num]
+      phone = ""
+
+      for char in phone_temp: # Only keep the digits, in case someone enters the phone number in the wrong format
+      	if char in digits:
+      	  phone += char
+
+      names.append(name)
+      phone_nums.append(phone)
+    
+    paths_db.update_one({          # UPDATE array of hackers in this path
         'name': 'iOS'
         }, {
-        '$push': {'hackers': name}
+        '$set': {'hackers': names, 'phone_nums': phone_nums}
       })
 
-  return render_template('ios.html')
+    return redirect('/ios')
 
-#ios path
+  hacker_names = paths_db.find_one({'name': 'iOS'})['hackers']
+  phone_nums = paths_db.find_one({'name': 'iOS'})['phone_nums']
+
+  return render_template('live.ios.html', hacker_names=hacker_names, phone_nums=phone_nums)
+
+#hardware path
 @mod_live.route('/hardware', methods=['GET', 'POST'])
 @login_required
 def hardware():
@@ -112,23 +134,41 @@ def hardware():
     return redirect('/admin')
 
   if request.method == 'POST':
-    phonenums = request.form['phonenums']
-    names = request.form['names']
-    admin = staff.find_one({'username': username})
+    #phonenums = request.form['phonenums'] # string containing CSV of phonenums
 
-    for name in names:
-      staff.update_one({          # UPDATE array of hackers in this path
+    names = []
+    phone_nums = []
+
+    for i in range(100):
+      curr_name = 'name' + str(i + 1) # name1 -> name100 will be the names from request.form
+      curr_phone_num = 'phone' + str(i + 1)
+
+      name = request.form[curr_name]
+      digits = '0123456789'
+      phone_temp = request.form[curr_phone_num]
+      phone = ""
+
+      for char in phone_temp: # Only keep the digits, in case someone enters the phone number in the wrong format
+      	if char in digits:
+      	  phone += char
+
+      names.append(name)
+      phone_nums.append(phone)
+    
+    paths_db.update_one({          # UPDATE array of hackers in this path
         'name': 'Hardware'
         }, {
-        '$push': {'hackers': name}
+        '$set': {'hackers': names, 'phone_nums': phone_nums}
       })
 
-    else:
-      return render_template('hardware.html')
-  
-  return render_template('hardware.html')
+    return redirect('/hardware')
 
-#ios path
+  hacker_names = paths_db.find_one({'name': 'Hardware'})['hackers']
+  phone_nums = paths_db.find_one({'name': 'Hardware'})['phone_nums']
+
+  return render_template('live.hardware.html', hacker_names=hacker_names, phone_nums=phone_nums)
+  
+#web dev path
 @mod_live.route('/web_dev', methods=['GET', 'POST'])
 @login_required
 def web_dev():
@@ -136,21 +176,39 @@ def web_dev():
     return redirect('/admin')
 
   if request.method == 'POST':
-    phonenums = request.form['phonenums']
-    names = request.form['names']
-    admin = staff.find_one({'username': username})
+    #phonenums = request.form['phonenums'] # string containing CSV of phonenums
 
-    for name in names:
-      staff.update_one({          # UPDATE array of hackers in this path
+    names = []
+    phone_nums = []
+
+    for i in range(100):
+      curr_name = 'name' + str(i + 1) # name1 -> name100 will be the names from request.form
+      curr_phone_num = 'phone' + str(i + 1)
+
+      name = request.form[curr_name]
+      digits = '0123456789'
+      phone_temp = request.form[curr_phone_num]
+      phone = ""
+
+      for char in phone_temp: # Only keep the digits, in case someone enters the phone number in the wrong format
+      	if char in digits:
+      	  phone += char
+
+      names.append(name)
+      phone_nums.append(phone)
+    
+    paths_db.update_one({          # UPDATE array of hackers in this path
         'name': 'Web Development'
         }, {
-        '$push': {'hackers': name}
+        '$set': {'hackers': names, 'phone_nums': phone_nums}
       })
 
-    else:
-      return render_template('web_dev.html')
-  
-  return render_template('web_dev.html')
+    return redirect('/web_dev')
+
+  hacker_names = paths_db.find_one({'name': 'Web Development'})['hackers']
+  phone_nums = paths_db.find_one({'name': 'Web Development'})['phone_nums']
+
+  return render_template('live.web_dev.html', hacker_names=hacker_names, phone_nums=phone_nums)
 
 @mod_live.route('/edit_schedule', methods=['GET', 'POST'])
 @login_required
@@ -165,35 +223,54 @@ def schedule():
 
     events_unsorted = []
 
-    for i in range(40):
-      curr_title_name = 'title' + str(i)
-      curr_day_name = 'days' + str(i)
-      curr_time_name = 'times' + str(i)
-      curr_spot = 'spot' + str(i)
-
+    for i in range(121):
+      curr_title_name = 'title' + str(i + 1)
+      curr_day_name = 'day' + str(i + 1)
+      curr_time_name = 'time' + str(i + 1)
+      
       title = request.form[curr_title_name]
       day = request.form[curr_day_name]
       time = request.form[curr_time_name]
-      spot = request.form[curr_spot]
+      spot = i + 1
 
-      if len(str(title)) > 0:
-        events_unsorted.append([title, day, time, spot])
+      events_unsorted.append([title, day, time, spot])
 
-    #DO STUFF HERE TO COLLECT EVERYTHING FROM SCHEDULE AND UPDATEEE
-    events = sort(events_unsorted)
+    #events = sort(events_unsorted)
 
-    # SAVE THE EVENTS IN SORTED ORDER
-    for i in range(len(events)):
-      schedule.update_one({
-        'spot': (i + 1)
+    # SAVE THE EVENTS IN DB
+    for e in events_unsorted:
+      if 'sat' in e[1].lower():
+      	e[1] = 'Sat'
+
+      elif 'sun' in e[1].lower():
+      	e[1] = 'Sun'
+
+
+      schedule_db.update_one({
+        'spot': e[3]
         }, {
-        '$set': {'title': event[0], 'day': event[1], 'time': event[2]}
+        '$set': {'title': e[0], 'day': e[1], 'time': e[2]}
       })
 
-    else:
-      return render_template('update_schedule.html')
+    return redirect('/edit_schedule')
+
+  events_unsorted = list(schedule_db.find())
+  events = sort(events_unsorted)
+
+  titles = []
+  days = []
+  times = []
+  spots = []
+
+  for e in events:
+  	titles.append(e['title'])
+  	days.append(e['day'])
+  	times.append(e['time'])
+  	spots.append(float(e['spot']))
+
+  print(titles)
   
-  return render_template('update_schedule.html')
+  return render_template('live.schedule.html', titles=titles, days=days, times=times, spots=spots)
 
 def userAuth(user, username, password):
     if (user == None):
@@ -227,12 +304,11 @@ def get_schedule():
   temp_events = sort(events_unsorted)
   events = [[], []]
   for e in temp_events:
-    if e['day'] == 'Sat':
-      events[0].append(e)
-    else:
-      events[1].append(e)
-
-    print(events[1])
+    if len(e['title'].strip()) > 0: #Don't display empty schedule events on live site!
+      if e['day'] == 'Sat':
+        events[0].append(e)
+      else:
+        events[1].append(e)
 
   return events
 
@@ -240,7 +316,7 @@ def get_schedule():
 def sort(events):
   for j in range(len(events) - 1, 0, -1):
     for i in range(j):
-      if float(events[i]['spot']) > int(events[i + 1]['spot']):
+      if float(events[i]['spot']) > float(events[i + 1]['spot']):
         temp = events[i]
         events[i] = events[i + 1]
         events[i + 1] = temp

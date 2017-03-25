@@ -8,15 +8,6 @@ h1 {
     font-weight: bold;
 }
 
-form {
-    border: 1px solid;
-    border-radius: 10px;
-    padding: 25px 25px 25px 25px;
-    margin-bottom: 50px;
-    background: white;
-    box-shadow: 2px 2px 2px #888888;
-}
-
 label {
     font-size: 130%;
     margin-left: 5px;

@@ -48,7 +48,7 @@
         <div class="row">
             <div class="col-md-3"></div>
             <div class="col-md-6">
-                <h1>hackBCA IV Schedule</h1>
+                <h1>Hackers Registered for Hardware Path</h1>
                 {% if error %}
                     <h2>{{ error }}</h2>
                 {% endif %}
@@ -57,15 +57,17 @@
         </div>
 
         <div class="row">
-        <form method="POST" action="/edit_schedule" class="text-center">
+        <form method="POST" action="/hardware" class="text-center">
             <div class="col-md-1"></div>
-                <div class="col-md-4">
+                <div class="col-md-6">
                 
-                    {% for i in range(121) %}
+                    {% for i in range(100) %}
                         <div class="form-group">
-                        
-                            <input style="width: 100%" type="text" name="title{{ i + 1 }}" value="{{ titles[i] }}" placeholder="Event Title">
-                        
+                        {% if hacker_names[i] %}
+                            <input style="width: 100%" type="text" name="name{{ i + 1 }}" value="{{ hacker_names[i] }}" placeholder="Hacker's Name">
+                        {% else %}
+                            <input style="width: 100%" type="text" name="name{{ i + 1 }}" value="" placeholder="Hacker's Name">
+                        {% endif %}
                         </div>
                     {% endfor %}
                     
@@ -74,40 +76,55 @@
 
                 <div class="col-md-4">
                 
-                    {% for i in range(121) %}
+                    {% for i in range(100) %}
                         <div class="form-group">
-                        
-                            <input style="width: 100%" type="text" name="day{{ i + 1 }}" value="{{ days[i] }}" placeholder="Event Day (Saturday or Sunday)">
-                        
+                        {% if phone_nums[i] %}
+                            <input style="width: 100%" type="text" name="phone{{ i + 1 }}" value="{{ phone_nums[i] }}" placeholder="Hacker's Phone Number (10 Digits only)">
+                        {% else %}
+                            <input style="width: 100%" type="text" name="phone{{ i + 1 }}" value="" maxlength="10"placeholder="Hacker's Phone Number (10 Digits only)">
+                        {% endif %}
                         </div>
                     {% endfor %}
                     
                     <br>
                     
                 </div>
-            
-                <div class="col-md-2">
-                
-                    {% for i in range(121) %}
-                        <div class="form-group">
-                        
-                            <input style="width: 100%" type="text" name="time{{ i + 1 }}" value="{{ times[i] }}" placeholder="Event Time">
-                        
-                        </div>
-                    {% endfor %}
-                    
-                    <br>
-                    
-                </div>
+            <div class="col-md-1"></div>
             
             <div class="col-md-3"></div>
             <div class="col-md-6">
                 <button type="submit" class="btn btn-lg btn-block text-center">Save Changes</button>
-                <br><br>
             </div>
             <div class="col-md-3"></div>
             </form>
             </div>
+
+            <div class="row">
+
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <button class="btn btn-lg btn-block text-center" id="save_phone_nums" onclick="copyToClipboard()">Copy phone numbers to clipboard</button>
+                <br><br>
+            </div>
+            <div class="col-md-3"></div>
+            </div>
+        
     </div>
  </body>   
 </html>
+
+<script>
+  function copyToClipboard() {
+    var result = "";
+    for (var i = 1; i < 101; i++) {
+        var temp_num = "phone" + i;
+
+        var temp = $("input[name=" + temp_num + "]").val();
+        if (temp.length > 0) {
+            result += temp + ",";
+        }
+    }
+
+    window.prompt("Copy to clipboard: Ctrl+C, Enter", result);
+  }
+</script>
