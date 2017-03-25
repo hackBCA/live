@@ -44,7 +44,9 @@ a.homelink {
 
 body
 {
-    font-size: 16px}
+    font-size: 16px;
+    margin: 0;
+    }
 
 
 h1
@@ -1166,7 +1168,7 @@ div#check-btns {
 .column-left{
     background-color: #262626;
     float: left;
-    width: 24%;
+    width: 30%;
 }
 
 .column-right{
@@ -1179,7 +1181,7 @@ div#check-btns {
 .column-center{
     background-color: white;
     display: inline-block;
-    width: 52%;
+    width: 46%;
 }
 
 nav ul {
@@ -1239,6 +1241,7 @@ nav li a {
     color: white;
     text-align: center;
     font-weight: 600;
+    margin-bottom: 15px;
 }
 
 .announcements-head {
@@ -1386,11 +1389,13 @@ p.day {
     font-size: 21px;
     text-align: left;
     padding-left: 15px;
+    margin-top: 0;
 }
 
 .column-left ul {
     list-style: none;
     padding-left: 15px;
+    display: block;
 }
 
 .time-block {
@@ -1402,6 +1407,7 @@ p.day {
 
 .column-left li {
     color: #c7c7c7;
+    line-height: 1.9;
 }
 
 .links a {
@@ -1471,7 +1477,7 @@ div#announcements {
     }
 
     .column-center {
-        width: 44%;
+        width: 38%;
     }
 }
 
@@ -1530,6 +1536,9 @@ div#announcements {
         width: 100%;
         max-width: 230px;
     }
+    div#schedule {
+        height: 100%;
+    }
 }
 
 
@@ -1552,9 +1561,10 @@ div#prizes-container,div#workshops-container  {
     margin-bottom: 7px;
 }
 
-#workshops-container h2 {
+#workshops-container h2, #prizes-container h2 {
     font-weight: 200;
     color: #8BDA48;
+    font-size: 34px;
 }
 
 #workshops-container b {
@@ -1562,7 +1572,21 @@ div#prizes-container,div#workshops-container  {
 }
 
 #workshops-container h4 {
-    margin-top: -15px;
+    margin-top: -8px;
     font-weight: 200;
     font-style: italic;
+    font-size: 22px;
+    margin-bottom: 2px;
+}
+
+#workshops-container p, #prizes-container p {
+    font-size: 17px;
+    line-height: 1.1;
+}
+
+div#schedule {
+    clear: both;
+    display: block;
+    height: 85%;
+    overflow-y:scroll;
 }

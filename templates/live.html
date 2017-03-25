@@ -44,23 +44,25 @@
    
    <div class="column-left">
    		<p>SCHEDULE</p>
+      <div id = "schedule">
+     		<p class = "day">Saturday</p>
+     		<ul>
+     		{% for date in schedule[0] %}
+     			
+     			<li><span class = "time-block">{{ date['time'] }}</span>{{ date['title'] }}</li>
+     		{% endfor %}
+     		</ul>
 
-   		<p class = "day">Saturday</p>
-   		<ul>
-   		{% for date in schedule[0] %}
-   			
-   			<li><span class = "time-block">{{ date['time'] }}</span>{{ date['title'] }}</li>
-   		{% endfor %}
-   		</ul>
-
-   		<p class = "day">Sunday</p>
-   		<ul>
-   		{% for date in schedule[1] %}
-   			
-   			<li><span class = "time-block">{{ date['time'] }}</span>{{ date['title'] }}</li>
-   		
-   		{% endfor %}
-   		</ul>
+     		<p class = "day">Sunday</p>
+     		<ul>
+     		{% for date in schedule[1] %}
+     			
+     			<li><span class = "time-block">{{ date['time'] }}</span>{{ date['title'] }}</li>
+     		
+     		{% endfor %}
+     		</ul>
+        <div style="clear: both;"></div>
+      </div>
    	</div>
    
    <div class="column-right">
