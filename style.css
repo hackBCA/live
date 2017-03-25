@@ -1,25 +1,1185 @@
-body {
-	margin: 0;
-	font-family:'azo-sans-web', 'Atlas Grotesk';
+*{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box}
+
+
+@font-face
+{
+    font-family: "Proxima Nova Light";
+    src: url("fonts/ProximaNova-Light.otf") format("opentype");
+    font-weight: 300}
+
+@font-face
+{
+    font-family: "Azo Sans Light";
+    src: url("fonts/AzoSans-Light.otf") format("opentype");
+    font-weight: 300}
+
+
+@font-face
+{
+    font-family: "Azo Sans Bold";
+    src: url("fonts/AzoSans-Bold.otf") format("opentype");
+    font-weight: 300}
+
+@font-face
+{
+    font-family: "Azo Sans Regular";
+    src: url("fonts/AzoSans-Regular.otf") format("opentype");
+    font-weight: 300}
+
+
+
+body
+{
+    font-family: "Proxima Nova Light",  Helvetica,  sans-serif;
+    color: black;
+    }
+
+a.homelink {
+    font-family: "Azo Sans Regular", "Proxima Nova Light",  Helvetica,  sans-serif;
+}
+
+
+body
+{
+    font-size: 16px}
+
+
+h1
+{
+    font-size: 6em;
+    margin: 10px 0;
+    font-weight: 400}
+
+
+h2
+{
+    font-size: 4.5em;
+    margin: 10px 0;
+    font-weight: 400}
+
+
+h3
+{
+    font-size: 3em;
+    margin: 10px 0;
+    font-weight: 400}
+
+
+h4
+{
+    font-size: 2.5em;
+    margin: 10px 0;
+    font-weight: 400}
+
+
+h5
+{
+    font-size: 2em;
+    margin: 10px 0;
+    font-weight: 400}
+
+
+h6
+{
+    font-size: 1.5em;
+    margin: 10px 0;
+    font-weight: 400;
+    font-weight: bold}
+
+
+p
+{
+    font-size: 1.25em}
+
+
+.logo
+{
+    width: 12.5em;
+    height: 12.5em}
+
+
+@media screen and (max-width: 85.375em)
+{
+    .logo
+{
+    width: 10em;
+    height: 10em}
+
+
+}
+
+
+@media screen and (max-width: 64em)
+{
+    h1
+{
+    font-size: 4.5em}
+
+
+h2
+{
+    font-size: 3em}
+
+
+h3
+{
+    font-size: 2.25em}
+
+
+h4
+{
+    font-size: 2em}
+
+
+h5
+{
+    font-size: 1.5em}
+
+
+h6
+{
+    font-size: 1.25em}
+
+
+p
+{
+    font-size: 1em}
+
+
+.logo
+{
+    width: 9.375em;
+    height: 9.375em}
+
+
+}
+
+
+@media screen and (max-width: 48em)
+{
+    h1
+{
+    font-size: 4.5em}
+
+
+h2
+{
+    font-size: 3em}
+
+
+h3
+{
+    font-size: 2.25em}
+
+
+h4
+{
+    font-size: 2em}
+
+
+h5
+{
+    font-size: 1.5em}
+
+
+h6
+{
+    font-size: 1.25em}
+
+
+p
+{
+    font-size: 1em}
+
+
+.logo
+{
+    width: 9.375em;
+    height: 9.375em}
+
+
+}
+
+
+@media screen and (max-width: 30em)
+{
+    h1
+{
+    font-size: 3em}
+
+
+h2
+{
+    font-size: 2.25em}
+
+
+h3
+{
+    font-size: 2em}
+
+
+h4
+{
+    font-size: 1.5em}
+
+
+h5
+{
+    font-size: 1.25em}
+
+
+h6
+{
+    font-size: 1.125em}
+
+
+p
+{
+    font-size: 1em}
+
+
+.logo
+{
+    width: 6.25em;
+    height: 6.25em}
+
+
+}
+
+
+a
+{
+    color: #2B93C9;
+    color: rgba(43, 147, 201, 0.75)}
+
+
+a:hover
+{
+    color: #96D3DC;
+    color: rgba(150, 211, 220, 0.75)}
+
+
+.hide
+{
+    display: none !important}
+
+
+.clearfix:after
+{
+    content: "";
+    display: table;
+    clear: both}
+
+
+.pure-g
+{
+    letter-spacing: initial;
+    text-align: center}
+
+
+.pure-g [class*="pure-u"]
+{
+    font-family: "Proxima Nova Light",  Helvetica,  sans-serif}
+
+
+.pure-g.center
+{
+    -webkit-justify-content: center;
+    justify-content: center}
+
+
+.pure-table
+{
+    margin: 1% auto;
+    width: 90%;
+    border-collapse: collapse}
+
+
+.pure-table input, .pure-table select
+{
+    padding: 5px 10px;
+    margin: 0;
+    background-image: none}
+
+
+.pure-table thead
+{
+    background-color: inherit;
+    color: inherit;
+    text-align: center}
+
+
+.pure-table tbody>tr:hover
+{
+    background-color: #eee !important;
+    color: #000;
+    cursor: pointer}
+
+
+.pure-table tbody span
+{
+    background-color: #3498db;
+    color: #fff;
+    padding: 5px;
+    border-radius: 2.5px}
+
+
+.pure-table tbody span#none
+{
+    background-color: #f39c12}
+
+
+#load_icon
+{
+    margin: 1% 0}
+
+
+.m-filters
+{
+    display: none}
+
+
+@media screen and (max-width: 1280px)
+{
+    .pure-table thead
+{
+    display: none}
+
+
+.m-filters
+{
+    display: block;
+    margin-bottom: 1%}
+
+
+.m-filters label p
+{
+    display: inline-block}
+
+
+.pure-table tr
+{
+    display: block;
+    border: 2px solid #ccc !important}
+
+
+.pure-table td
+{
+    display: block;
+    text-align: right;
+    font-size: 13px;
+    border-bottom: 1px dotted #ccc !important}
+
+
+.pure-table td:last-child
+{
+    border-bottom: 0}
+
+
+.pure-table td:before
+{
+    content: attr(data-label);
+    float: left;
+    text-transform: uppercase;
+    font-weight: bold}
+
+
+}
+
+
+.page-container
+{
+    margin-left: 150px;
+    position: relative;
+    left: 0}
+
+
+@media screen and (max-width: 768px)
+{
+    .page-container
+{
+    margin-left: 0}
+
+
+}
+
+
+.page-container .page-section
+{
+    background-color: #111211;
+    height: 100vh;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    padding: 0;
+    display: table}
+
+
+.page-container .page-section .container
+{
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    padding: 1% 0}
+
+
+.page-container .page-section .container .cover
+{
+    padding: 2.5% 5%}
+
+
+.page-container .page-section .container .cover .content
+{
+    color: #fff;
+    margin-top: 50px}
+
+
+.page-container .page-section .container .cover .content input, .page-container .page-section .container .cover .content textarea, .page-container .page-section .container .cover .content select
+{
+    width: 25%}
+
+
+@media screen and (max-width: 1024px)
+{
+    .page-container .page-section .container .cover .content input, .page-container .page-section .container .cover .content textarea, .page-container .page-section .container .cover .content select
+{
+    width: 37%}
+
+
+}
+
+
+@media screen and (max-width: 768px)
+{
+    .page-container .page-section .container .cover .content input, .page-container .page-section .container .cover .content textarea, .page-container .page-section .container .cover .content select
+{
+    width: 50%}
+
+
+}
+
+
+@media screen and (max-width: 480px)
+{
+    .page-container .page-section .container .cover .content input, .page-container .page-section .container .cover .content textarea, .page-container .page-section .container .cover .content select
+{
+    width: 75%}
+
+
+}
+
+
+@media screen and (max-width: 768px)
+{
+    .page-container
+{
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out}
+
+
+.page-container.active
+{
+    left: 150px}
+
+
+}
+
+
+#menu
+{
+    position: fixed;
+    width: 150px;
+    background-color: #222322;
+    height: 100vh;
+    overflow-y: auto;
+    top: 0;
+    left: 0;
+    -webkit-overflow-scrolling: touch;
+    z-index: 9998;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out}
+
+
+#menu .pure-menu-item .pure-menu-link
+{
+    color: #fff}
+
+
+#menu .pure-menu-item .pure-menu-link:hover
+{
+    color: #000}
+
+
+#menu .pure-menu-item .pure-menu-link p
+{
+    margin: 0}
+
+
+.menu-link
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    z-index: 10;
+    font-size: 10px;
+    background-color: #a8a8a8;
+    padding: 1em 1.3em;
+    color: #fff}
+
+
+.menu-link:hover
+{
+    background-color: #fff;
+    color: #a8a8a8}
+
+
+@media screen and (max-width: 768px)
+{
+    #menu
+{
+    left: -200px}
+
+
+#menu.active
+{
+    left: 0}
+
+
+.menu-link
+{
+    display: block;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out}
+
+
+.menu-link.active
+{
+    left: 200px}
+
+
+.menu-link span
+{
+    display: block}
+
+
+}
+
+
+.buttons.horizontal
+{
+    margin: 25px 0 0 0}
+
+
+.buttons.horizontal .btn
+{
+    display: inline-block;
+    margin-right: 10px}
+
+
+.buttons.horizontal:last-child
+{
+    margin-right: 0}
+
+
+.btn
+{
+    background-color: #49bb96;
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+    padding: 13px 30px;
+    border: none;
+    font-size: 20px;
+    text-decoration: none;
+    margin-bottom: 4px}
+
+
+.btn:hover, .btn.clicked
+{
+    background-color: #a4ddca;
+    color: #fff}
+
+
+.btn:disabled
+{
+    background-color: #505050}
+
+
+.card
+{
+    width: 80%;
+    background-color: #3B3C3D;
+    color: #fff;
+    border-radius: 2px;
+    margin: 1% auto}
+
+
+.card .pure-g
+{
+    -webkit-justify-content: center;
+    justify-content: center;
+    max-width: 80%;
+    margin: 0 auto}
+
+
+.card .pure-g p span
+{
+    text-decoration: underline;
+    font-weight: bold}
+
+
+.card #basic_info>h4, .card #links>h4, .card #free_responses>h4
+{
+    background-color: #49bb96;
+    color: #fff;
+    padding: 1% 0}
+
+
+input, textarea, select
+{
+    background-color: #c8c8c8;
+    background-color: rgba(200, 200, 200, 0.5);
+    outline: none;
+    box-shadow: none;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 0;
+    font-size: 20px;
+    margin-bottom: 1%}
+
+
+select
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-size: 50px}
+
+
+select::-ms-expand
+{
+    display: none}
+
+
+.form-elt ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1% 0}
+
+
+.form-elt ul li
+{
+    width: 12%;
+    margin: 0% 0.5% 1%;
+    display: inline-block;
+    background-color: #c8c8c8;
+    background-color: rgba(200, 200, 200, 0.5)}
+
+
+@media screen and (max-width: 1024px)
+{
+    .form-elt ul li
+{
+    width: 24.5%}
+
+
+}
+
+
+@media screen and (max-width: 768px)
+{
+    .form-elt ul li
+{
+    width: 37%}
+
+
+}
+
+
+@media screen and (max-width: 480px)
+{
+    .form-elt ul li
+{
+    width: 49.5%}
+
+
+}
+
+
+.form-elt ul li:last-child
+{
+    margin-right: 0}
+
+
+.form-elt ul li input[type="radio"]
+{
+    width: auto;
+    margin-left: -100000px}
+
+
+.form-elt ul li input[type="radio"]:empty ~ label
+{
+    position: relative;
+    float: left;
+    padding: 15px 30px;
+    width: 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 20px}
+
+
+.form-elt ul li input[type="radio"]:hover:not(:checked) ~ label
+{
+    background-color: rgba(200, 200, 200, 0.25)}
+
+
+.form-elt ul li input[type="radio"]:checked ~ label
+{
+    color: #202020;
+    background-color: rgba(255, 255, 255, 0.5)}
+
+
+.form-elt ul.checkboxes li, .form-elt ul#roles li
+{
+    background-color: rgba(200, 200, 200, 0.5);
+    color: #fff;
+    width: 12%}
+
+
+@media screen and (max-width: 1366px)
+{
+    .form-elt ul.checkboxes li, .form-elt ul#roles li
+{
+    width: 25%}
+
+
+}
+
+
+@media screen and (max-width: 1024px)
+{
+    .form-elt ul.checkboxes li, .form-elt ul#roles li
+{
+    width: 35%}
+
+
+}
+
+
+@media screen and (max-width: 768px)
+{
+    .form-elt ul.checkboxes li, .form-elt ul#roles li
+{
+    width: 45%}
+
+
+}
+
+
+@media screen and (max-width: 480px)
+{
+    .form-elt ul.checkboxes li, .form-elt ul#roles li
+{
+    width: 50%}
+
+
+}
+
+
+.form-elt ul.checkboxes li input[type="checkbox"], .form-elt ul#roles li input[type="checkbox"]
+{
+    width: auto !important;
+    margin-left: -100000px}
+
+
+.form-elt ul.checkboxes li input[type="checkbox"] ~ label, .form-elt ul#roles li input[type="checkbox"] ~ label
+{
+    position: relative;
+    float: left;
+    padding: 15px 30px;
+    width: 100%;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 20px}
+
+
+.form-elt ul.checkboxes li input[type="checkbox"] ~ label:before, .form-elt ul#roles li input[type="checkbox"] ~ label:before
+{
+    position: absolute;
+    display: block;
+    content: '\2714';
+    color: #c8c8c8;
+    left: 0;
+    content: '';
+    width: 2em}
+
+
+.form-elt ul.checkboxes li input[type="checkbox"]:hover:not(:checked) ~ label, .form-elt ul#roles li input[type="checkbox"]:hover:not(:checked) ~ label
+{
+    background-color: rgba(200, 200, 200, 0.25)}
+
+
+.form-elt ul.checkboxes li input[type="checkbox"]:hover:not(:checked) ~ label:before, .form-elt ul#roles li input[type="checkbox"]:hover:not(:checked) ~ label:before
+{
+    content: '\2714';
+    color: #2ecc71}
+
+
+.form-elt ul.checkboxes li input[type="checkbox"]:checked ~ label, .form-elt ul#roles li input[type="checkbox"]:checked ~ label
+{
+    color: #fff;
+    background-color: #2ecc71}
+
+
+.form-elt ul.checkboxes li input[type="checkbox"]:checked ~ label:before, .form-elt ul#roles li input[type="checkbox"]:checked ~ label:before
+{
+    content: '\2714';
+    color: #fff}
+
+
+::-webkit-input-placeholder
+{
+    color: #d7d7d7}
+
+
+:-moz-placeholder
+{
+    color: #d7d7d7}
+
+
+::-moz-placeholder
+{
+    color: #d7d7d7}
+
+
+:-ms-input-placeholder
+{
+    color: #d7d7d7}
+
+
+@-webkit-keyframes slide-in
+{
+    from
+{
+    bottom: -100px}
+
+
+to
+{
+    bottom: 0}
+
+
+}
+
+
+@-moz-keyframes slide-in
+{
+    from
+{
+    bottom: -100px}
+
+
+to
+{
+    bottom: 0}
+
+
+}
+
+
+@-o-keyframes slide-in
+{
+    from
+{
+    bottom: -100px}
+
+
+to
+{
+    bottom: 0}
+
+
+}
+
+
+@keyframes slide-in
+{
+    from
+{
+    bottom: -100px}
+
+
+to
+{
+    bottom: 0}
+
+
+}
+
+
+@-webkit-keyframes slide-out
+{
+    to
+{
+    bottom: -100px}
+
+
+}
+
+
+@-moz-keyframes slide-out
+{
+    to
+{
+    bottom: -100px}
+
+
+}
+
+
+@-o-keyframes slide-out
+{
+    to
+{
+    bottom: -100px}
+
+
+}
+
+
+@keyframes slide-out
+{
+    to
+{
+    bottom: -100px}
+
+
+}
+
+
+.flashes
+{
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    -webkit-animation: slide-in 0.75s 0s forwards;
+    -moz-animation: slide-in 0.75s 0s forwards;
+    -ms-animation: slide-in 0.75s 0s forwards;
+    -o-animation: slide-in 0.75s 0s forwards;
+    animation: slide-in 0.75s 0s forwards}
+
+
+.flashes.fade-out
+{
+    -webkit-animation: slide-out 0.75s 0s forwards;
+    -moz-animation: slide-out 0.75s 0s forwards;
+    -ms-animation: slide-out 0.75s 0s forwards;
+    -o-animation: slide-out 0.75s 0s forwards;
+    animation: slide-out 0.75s 0s forwards}
+
+
+.flashes li
+{
+    list-style: none}
+
+
+.flashes li.success
+{
+    background-color: #2ecc71}
+
+
+.flashes li.error
+{
+    background-color: #e74c3c}
+
+
+.flashes li.warning
+{
+    background-color: #f39c12}
+
+
+.flashes li.neutral
+{
+    background-color: #3498db}
+
+
+.flashes li .close
+{
+    display: inline-block;
+    top: auto;
+    bottom: auto;
+    position: absolute;
+    right: 12px;
+    height: 100%}
+
+
+.flashes li .close .icon-container
+{
+    position: relative;
+    height: 100%}
+
+
+.flashes li .close .icon-container .close-icon
+{
+    cursor: pointer;
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    font-size: 24px;
+    height: 24px;
+    margin-top: -12px}
+
+
+.flashes li p
+{
+    margin: 0;
+    font-size: 1.2em;
+    padding: 1% 5%;
+    color: #fff;
+    display: inline-block;
+    vertical-align: bottom}
+
+
+@media screen and (max-width: 768px)
+{
+    .flashes li p
+{
+    padding: 2.5% 5%}
+
+
+}
+
+
+@media screen and (max-width: 480px)
+{
+    .flashes li p
+{
+    padding: 5% 5%}
+
+
+}
+
+
+#broadcast .container .header #messages_container
+{
+    text-align: left;
+    max-height: 600px;
+    overflow: scroll;
+    border: 1px solid #eee;
+    margin-right: 20px}
+
+
+#broadcast .container .header #messages_container>div
+{
+    margin: 15px 0}
+
+
+#broadcast .container .header #messages_container>div span
+{
+    font-size: 1.25em;
+    display: inline-block;
+    margin-left: 5px}
+
+
+#broadcast .container .header #messages_container>div span.sender
+{
+    font-weight: 800}
+
+
+#broadcast .container .header #messages_container>div span.message
+{
+    background-color: #2B93C9;
+    color: #fff;
+    padding: 2.5px 5px}
+
+
+#broadcast .container .header #messages_container>div span.datestamp
+{
+    font-size: 1em;
+    display: none}
+
+
+#broadcast .container .header #messages_container>div span.timestamp
+{
+    font-size: 1em}
+
+
+.pure-table td,  .pure-table th 
+{
+    padding:  0.3em 1em;
+}
+
+
+ button.btn.check 
+{
+    float:  left;
+        margin-top: 4px;
+}
+
+
+button.btn.attendance 
+{
+    float:  right;
+        margin-top: 4px;
+}
+
+
+div#check-btns {
+    width: 18em;
+}
+
+#live-page {
+    margin: 0;
+    font-family:'Azo Sans Regular', "Proxima Nova Light",  Helvetica,  sans-serif;
 }
 
 .column-left{
-	background-color: #262626;
-	float: left;
-	width: 24%;
+    background-color: #262626;
+    float: left;
+    width: 24%;
 }
 
 .column-right{
-	background-color: white;
-	float: right;
-	width: calc(24% - 2px);
-	border-left: 1px solid #909090;
+    background-color: white;
+    float: right;
+    width: calc(24% - 2px);
+    border-left: 1px solid #909090;
 }
 
 .column-center{
-	background-color: white;
-	display: inline-block;
-	width: 52%;
+    background-color: white;
+    display: inline-block;
+    width: 52%;
 }
 
 nav ul {
@@ -28,6 +1188,7 @@ nav ul {
     padding: 0;
     overflow: hidden;
     background-color: #000;
+    font-family:'azo-sans-web', 'Atlas Grotesk';
 }
 
 nav li {
@@ -47,17 +1208,18 @@ nav li a {
 }
 
 .homelink span {
-	position: relative;
-	top: 4px;
-	font-size: 19px;
-	padding-left: 5px;
+    position: relative;
+    top: 4px;
+    font-size: 19px;
+    padding-left: 5px;
 }
 
 .right-link {
-	float: right;
-	margin-right: 5px;
-	margin-top: 5px;
-	color: #CDCDCD;
+    font-family: "Azo Sans Regular", "Proxima Nova Light",  Helvetica,  sans-serif;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
+    color: #CDCDCD;
 }
 
 .right-link a {
@@ -126,6 +1288,9 @@ iframe#twitter-widget-0 {
     font-weight: 600;
     margin: 7px;
 }
+#announcements {
+    color: black;
+}
 
 .announcement {
     width: 90%;
@@ -148,7 +1313,6 @@ iframe#twitter-widget-0 {
 .highest.announcement h3 {
     font-size: 20px;
     margin-bottom: 9px;
-    margin-top: 0;
 }
 
 
@@ -205,6 +1369,10 @@ iframe#twitter-widget-0 {
     cursor: pointer;
 }
 
+#APImodal p {
+    margin-bottom: 0;
+}
+
 .modal-header {
     padding: 2px 16px;
     background-color: #4a4a4a;
@@ -249,12 +1417,12 @@ div#announcements {
 }
 
 .countdown {
-	position: absolute;
-	bottom: 2%;
-	left: 1%;
-	width: 19.5%;
-	background: #4C4C4C;
-	padding: 1px 13px 5px 13px;
+    position: absolute;
+    bottom: 2%;
+    left: 1%;
+    width: 19.5%;
+    background: #4C4C4C;
+    padding: 1px 13px 5px 13px;
 }
 
 .time-count p {
@@ -298,70 +1466,70 @@ div#announcements {
 }
 
 @media (max-width: 1090px) and (min-width: 825px) {
-	.column-right {
-	    width: calc(32% - 2px);
-	}
+    .column-right {
+        width: calc(32% - 2px);
+    }
 
-	.column-center {
-	    width: 44%;
-	}
+    .column-center {
+        width: 44%;
+    }
 }
 
 @media (max-width: 824px) {
-	.column-center, .column-left, .column-right {
-	    float: none;
-	    width: 100%;
-	}
+    .column-center, .column-left, .column-right {
+        float: none;
+        width: 100%;
+    }
 
-	.container {
-	    height: auto;
-	}
+    .container {
+        height: auto;
+    }
 
-	div#announcements {
-	    height: 480px;
-	}
+    div#announcements {
+        height: 480px;
+    }
 
-	.column-left {
-	    padding-top: 10px;
-	    padding-bottom: 40px;
-	}
+    .column-left {
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
 
-	iframe#twitter-widget-0 {
-	    height: 380px !important;
-	    width: 81% !important;
-	    margin: 80px auto;
-	    display: block !important;
-	}
-	.modal-content {
-	    width: 100%;
-	    height: 100%;
+    iframe#twitter-widget-0 {
+        height: 380px !important;
+        width: 81% !important;
+        margin: 80px auto;
+        display: block !important;
+    }
+    .modal-content {
+        width: 100%;
+        height: 100%;
         overflow-y: scroll;
-	}
-	.modal {
-	    padding-top: 0;
-	}
-	.countdown {
-	    position: relative;
-	    margin: 40px auto 0px auto;
-	    width: 50%;
-	}
+    }
+    .modal {
+        padding-top: 0;
+    }
+    .countdown {
+        position: relative;
+        margin: 40px auto 0px auto;
+        width: 50%;
+    }
 }
 
 @media (max-width: 680px) {
-	.col1, .col2 {
-	    float: none;
-	    width: 78%;
-	    margin: 0 auto;
-	}
+    .col1, .col2 {
+        float: none;
+        width: 78%;
+        margin: 0 auto;
+    }
 
-	.api-logos a {
-	    margin: 40px;
-	}
+    .api-logos a {
+        margin: 40px;
+    }
 
-	.api-logos img {
-	    width: 100%;
-	    max-width: 230px;
-	}
+    .api-logos img {
+        width: 100%;
+        max-width: 230px;
+    }
 }
 
 
