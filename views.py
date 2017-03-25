@@ -41,6 +41,9 @@ class Admin(object):
   def get_id(self):
     return str(self._id)
 
+  def full_name(self):
+    return self.username
+
 @login_manager.user_loader
 def load_user(_id):
   if id is None:
@@ -72,10 +75,10 @@ def admin_login():
   return render_template('live.admin_login.html')
 
 # dashboard, here you can see ios, hardware, web dev, scheduling buttons
-@mod_live.route('/dashboard', methods=['GET'])
+@mod_live.route('/dashboard', methods=['GET', 'POST'])
 @login_required
 def view_dashboard():
-  if (not current_user.is_authenticated()):
+  if (not current_user.is_authenticated):
     return redirect('/admin')
 
   return render_template('live.dashboard.html')
@@ -88,7 +91,7 @@ def ios():
     return redirect('/admin')
 
   if request.method == 'POST':
-    phonenums = request.form['phonenums']
+    phonenums = request.form['phonenums'] # string containing CSV of phonenums
     names = request.form['names']
     admin = staff.find_one({'username': username})
 
@@ -99,9 +102,6 @@ def ios():
         '$push': {'hackers': name}
       })
 
-    else:
-      return render_template('ios.html')
-  
   return render_template('ios.html')
 
 #ios path

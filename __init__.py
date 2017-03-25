@@ -9,4 +9,4 @@ live_module = Blueprint(
 	static_folder="live_static"
 )
 
-from . import views  
+from . import views
