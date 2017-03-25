@@ -1,0 +1,21 @@
+{% extends "user.base.html" %}
+
+{% block content %}
+{% with nav_bar = nav_bar %}
+ <div class="in login">
+  {% include "navbar.html" %}
+{% endwith %}
+
+          
+<h1 class="title">Forgot</h1><br>
+ <h3>{{ email }}</h3>
+  <form method="POST" action="">
+     {% for field in form %}
+          {{ render_field(field) }}
+      {% endfor %}
+    <input type="submit" value="Change Password" class="button">
+</form>
+
+
+{% endblock  %}
+

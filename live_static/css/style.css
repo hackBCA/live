@@ -1,0 +1,241 @@
+body {
+	margin: 0;
+	font-family:'azo-sans-web', 'Atlas Grotesk';
+}
+
+.column-left{
+	background-color: #262626;
+	float: left;
+	width: 24%;
+}
+
+.column-right{
+	background-color: white;
+	float: right;
+	width: calc(24% - 2px);
+	border-left: 1px solid #909090;
+}
+
+.column-center{
+	background-color: white;
+	display: inline-block;
+	width: 52%;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.homelink img {
+    width: 29px;
+}
+
+.homelink span {
+	position: relative;
+	top: 4px;
+	font-size: 19px;
+	padding-left: 5px;
+}
+
+.right-link {
+	float: right;
+	margin-right: 5px;
+	margin-top: 5px;
+	color: #CDCDCD;
+}
+
+.right-link a {
+    color: #d8d8d8;
+}
+
+.container {
+    height: calc(100vh - 59px);
+}
+
+.column-center, .column-left, .column-right {
+    height: 100%;
+}
+
+.column-left p {
+    font-size: 19px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.announcements-head {
+    font-size: 19px;
+    color: black;
+    margin-left: 22px;
+    font-weight: 600;
+}
+
+iframe#twitter-widget-0 {
+    height: 70% !important;
+}
+
+.links-col1 {
+    float: left;
+    width: 50%;
+}
+
+.links-col2 {
+    float: right;
+    width: 50%;
+}
+
+.links ul {
+    list-style: none;
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.links ul
+ li {
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.links {
+    clear: none;
+    width: 85%;
+    max-width: 240px;
+    margin: 0 auto;
+}
+
+.column-right p {
+    font-size: 19px;
+    color: black;
+    text-align: center;
+    font-weight: 600;
+    margin: 7px;
+}
+
+.announcement {
+    width: 90%;
+    margin-left: 22px;
+}
+
+.announcement p {
+    font-size: 13px;
+    margin-top: 6px;
+}
+
+.announcement h4 {
+    margin-bottom: 5px;
+}
+
+.highest.announcement p {
+    font-size: 17px;
+}
+
+.highest.announcement h3 {
+    font-size: 20px;
+    margin-bottom: 9px;
+}
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+.closeAPI, .closePrizes, .closewkshps {
+    color: white;
+    float: right;
+    font-size: 32px;
+    font-weight: bold;
+    transition: 0.3s fade;
+}
+
+.closeAPI:hover, .closePrizes:hover, .closewkshps:hover, .closeAPI:focus, .closePrizes:focus, .closewkshps:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+p.day {
+    font-weight: 100;
+    font-size: 21px;
+    text-align: left;
+    padding-left: 15px;
+}
+
+.column-left ul {
+    list-style: none;
+    padding-left: 15px;
+}
+
+.time-block {
+    background-color: #85D961;
+    padding: 5px;
+    margin-right: 10px;
+    color: black;
+}
+
+.column-left li {
+    color: #c7c7c7;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}

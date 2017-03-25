@@ -1,0 +1,28 @@
+{% extends "user.base.html" %}
+
+{% set nav_bar = [
+  ("/#home", "Home", False)
+] -%}
+
+{% block content %}
+<div class="in login">
+{% with nav_bar = nav_bar %}
+  {% include "navbar.html" %}
+{% endwith %}
+
+  
+
+  <div class="bg"></div>
+      <h1>hackBCA IV</h1>
+      <br>
+      <form method="POST" action="">
+      {% for field in form %}
+          {{ render_field(field) }}<br>    
+      {% endfor %}
+      
+        <input type="submit" value="LOGIN" class="button">
+        <a href="/forgot"><p>Forgot Password?</p></a>
+      </form>
+</div>
+
+{% endblock %}
