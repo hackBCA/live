@@ -148,6 +148,7 @@ iframe#twitter-widget-0 {
 .highest.announcement h3 {
     font-size: 20px;
     margin-bottom: 9px;
+    margin-top: 0;
 }
 
 
@@ -270,6 +271,32 @@ div#announcements {
     margin-bottom: 0;
 }
 
+.col1 {
+    float: left;
+    width: 50%;
+}
+
+.col2 {
+    float: right;
+    width: 50%;
+}
+
+.api-logos img {
+    display: block;
+    width: 50%;
+    margin: 20px auto;
+}
+
+.api-logos a {
+    text-align: center;
+    display: block;
+    margin: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+}
+
 @media (max-width: 1090px) and (min-width: 825px) {
 	.column-right {
 	    width: calc(32% - 2px);
@@ -299,8 +326,6 @@ div#announcements {
 	    padding-bottom: 40px;
 	}
 
-	iframe#rufous-sandbox {}
-
 	iframe#twitter-widget-0 {
 	    height: 380px !important;
 	    width: 81% !important;
@@ -322,3 +347,54 @@ div#announcements {
 	}
 }
 
+@media (max-width: 680px) {
+	.col1, .col2 {
+	    float: none;
+	    width: 78%;
+	    margin: 0 auto;
+	}
+
+	.api-logos a {
+	    margin: 40px;
+	}
+
+	.api-logos img {
+	    width: 100%;
+	    max-width: 230px;
+	}
+}
+
+
+div#prizes-container,div#workshops-container  {
+    padding: 20px;
+}
+
+#prizes-container h1, #workshops-container h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.top10-title {
+    text-decoration: underline;
+    margin-bottom: -12px;
+}
+
+.em {
+    height: 1.4em;
+    margin-bottom: 7px;
+}
+
+#workshops-container h2 {
+    font-weight: 200;
+    color: #8BDA48;
+}
+
+#workshops-container b {
+    color: black;
+}
+
+#workshops-container h4 {
+    margin-top: -15px;
+    font-weight: 200;
+    font-style: italic;
+}
